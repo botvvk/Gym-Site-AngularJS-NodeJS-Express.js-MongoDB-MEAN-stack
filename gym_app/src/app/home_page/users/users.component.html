@@ -1,0 +1,49 @@
+<div class="center">
+  <mat-card class ="box1">
+  <mat-card-header class ="mat-card-header">
+    <mat-card-title>CURREN USER INFORMATON</mat-card-title>
+  </mat-card-header>
+
+  <p>{{user.email}} </p>
+  <p>{{user.password}} </p>
+  <p>{{user.username}} </p>
+  <p>{{user.mobile}} </p>
+  <p>{{user.role}}</p>
+  </mat-card>
+</div>
+<div class="mat-card-cvr">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <mat-card class ="box">
+    <mat-card-header class ="mat-card-header">
+      <mat-card-title>CHANGE USER INFORMATON</mat-card-title>
+    </mat-card-header>
+    <form class="example-form" (submit)="onUpdate(editForm)" #editForm="ngForm" *ngIf="!isLoading">       <!--οταν γινεται submit ( type submit), ειναιτύπου ngForm  -->
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input matInput name="email" [ngModel]="user.email" type ="email" placeholder="Email" #emailInput="ngModel" >
+          <mat-error *ngIf =emailInput.invalid>Please enter a valid email</mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput name="password" [ngModel]="user.password"  placeholder="Password" #passwordInput="ngModel">
+          <mat-error *ngIf =passwordInput.invalid>Please enter a valid password</mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput name="username" [ngModel]="user.username" type ="username" placeholder="Username" #usernameInput="ngModel" >
+          <mat-error *ngIf =usernameInput.invalid>Please enter a valid username</mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput name="mobile" [ngModel]="user.mobile" type ="mobile" placeholder="Mobile" #mobileInput="ngModel" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <select matNativeControl name="role" [ngModel]="user.role" type ="role" placeholder="User Role" #adminInput="ngModel"required>
+            <option value="User">User</option>
+            <option value="Admin">Admin</option>
+          </select>
+        </mat-form-field>
+          <!--Χρησιμοποιουμε mat-form-field και matInput για να ελεγχξουμε τον type με NgModel(email και password) required (*) επειδη πρεπει να μπουνε σιγουρα)   -->
+      </mat-card-content>
+      <button mat-stroked-button color="black"  class="btn-block" type="submit" *ngIf="!isLoading">UPDATE THE FILLED FIELDS</button>
+      <button mat-stroked-button color="warn" (click)="onDelete(user.id)">DELETE</button>
+    </form>
+  </mat-card>
+</div>

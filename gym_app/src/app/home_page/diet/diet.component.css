@@ -1,0 +1,14 @@
+/*#pop-up{
+  top: -400px;
+  animation : drop 0.8s ease forwards;
+}
+
+@keyframes drop{
+  0%{ opacity:0%}
+  70%{transform: transalateY(700px)}
+  100%{transform: transalateY(650px)}
+}
+*/
+.first{
+  font-size: 16px;
+}

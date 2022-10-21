@@ -1,0 +1,65 @@
+<div class="center">
+  <mat-card class ="box1">
+  <mat-card-header class ="mat-card-header">
+    <mat-card-title>CURRENT CLASS INFORMATON</mat-card-title>
+  </mat-card-header>
+
+  <p>{{class.classname}} </p>
+  <p>{{class.description}} </p>
+  <p>{{class.day}} </p>
+  <p>{{class.time}} </p>
+
+
+  </mat-card>
+</div>
+<div class="mat-card-cvr">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <mat-card class ="box">
+    <mat-card-header class ="mat-card-header">
+      <mat-card-title>CHANGE CLASS INFORMATON</mat-card-title>
+    </mat-card-header>
+    <form class="example-form" (submit)="onUpdate(editForm)" #editForm="ngForm" *ngIf="!isLoading">       <!--οταν γινεται submit ( type submit, ειναι στο κουμπι Signup), ειναιτύπου ngForm  -->
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input matInput name="classname" [ngModel]="class.classname"  placeholder="Present value :{{class.classname}}" #classnameInput="ngModel" >
+          <mat-error *ngIf =classnameInput.invalid>Please enter a valid classname</mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput name="description" [ngModel]="class.description"  placeholder="Present value :{{class.description}}" #descriptionInput="ngModel">
+          <mat-error *ngIf =descriptionInput.invalid>Please enter a valid description</mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <select matNativeControl name="day" [ngModel]="class.day"  placeholder="Present value :{{class.day}}" #timeInput="ngModel"required>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <select matNativeControl name="time" [ngModel]="class.time"  placeholder="Present value :{{class.time}}" #timeInput="ngModel"required>
+            <option value="10:00AM">10:00AM</option>
+            <option value="11:00AM">11:00AM</option>
+            <option value="12:00PM">12:00PM</option>
+            <option value="13:00PM">13:00PM</option>
+            <option value="14:00PM">14:00PM</option>
+            <option value="15:00PM">15:00PM</option>
+            <option value="16:00PM">16:00PM</option>
+            <option value="17:00PM">17:00PM</option>
+            <option value="18:00PM">18:00PM</option>
+            <option value="19:00PM">19:00PM</option>
+            <option value="20:00PM">20:00PM</option>
+            <option value="21:00PM">21:00PM</option>
+            <option value="22:00PM">22:00PM</option>
+          </select>
+        </mat-form-field>
+          <!--Χρησιμοποιουμε mat-form-field και matInput για να ελεγχξουμε τον type με NgModel(classname και description) required (*) επειδη πρεπει να μπουνε σιγουρα)   -->
+      </mat-card-content>
+      <button mat-stroked-button color="black"  class="btn-block" type="submit" *ngIf="!isLoading">UPDATE THE FILLED FIELDS</button>
+      <button mat-stroked-button color="warn" (click)="onDelete(class.id)">DELETE</button>
+    </form>
+  </mat-card>
+</div>

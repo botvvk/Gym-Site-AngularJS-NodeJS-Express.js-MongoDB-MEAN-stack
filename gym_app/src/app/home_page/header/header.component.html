@@ -1,0 +1,41 @@
+      <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a class="logo">GYM<em> EPOCH</em></a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section" (click)="closeMenu($event)"><a routerLink="/" >HOME</a></li>
+                            <li *ngIf = "!userIsAdmin"
+                             class="scroll-to-section" (click)="closeMenu($event)"><a routerLink="/about">ABOUT</a></li>
+                            <li class="scroll-to-section" (click)="closeMenu($event)"><a routerLink="/allclasses">CLASSES</a></li>
+                            <li *ngIf = "!userIsAdmin"
+                            class="scroll-to-section" (click)="closeMenu($event)"><a routerLink="/contact">CONTACT</a></li>
+                            <li *ngIf =  "userIsAuthenticated && !userIsAdmin"
+                            class="scroll-to-section" (click)="closeMenu($event)"><a routerLink="/myaccount">MY ACCOUNT</a></li>
+                            <li *ngIf =  "userIsAuthenticated && !userIsAdmin"
+                            class="scroll-to-section" (click)="closeMenu($event)"><a routerLink="/mydiet">MY DIET</a></li>
+                            <li *ngIf = "userIsAdmin"
+                            class="scroll-to-section" (click)="closeMenu($event)"><a routerLink="/adminaccount">ADMIN ACCOUNT</a></li>
+                            <li *ngIf = "!userIsAuthenticated"
+                            class="main-button" (click)="closeMenu($event)"><a routerLink="/login">Login</a></li>
+                            <li *ngIf = "!userIsAuthenticated"
+                             class="main-button" (click)="closeMenu($event)"><a routerLink="/signup">Signup</a></li>
+                            <li *ngIf = "userIsAuthenticated"
+                              class="main-button" (click)="closeMenu($event)"><a (click)="onLogout()">Logout</a></li>
+                        </ul>
+                        <a class='menu-trigger' (click)="showMenu($event)">
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+
+
+                </div>
+            </div>
+        </div>
+    </header>
+

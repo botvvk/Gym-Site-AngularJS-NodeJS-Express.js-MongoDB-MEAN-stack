@@ -1,0 +1,81 @@
+<section id="section">
+    <div class="section-heading" >
+      <h2>Reservations<em> Calendar</em></h2>
+    </div>
+    <form novalidate #form="ngForm">
+        <mat-form-field appearance="fill">
+
+            <mat-label>Time</mat-label>
+            <mat-select
+
+              name="time"
+              [(ngModel)]="time"
+              (change)="program = ''" placeholder="">
+
+              <mat-option></mat-option>
+              <mat-option value="10:00PM">20:00PM</mat-option>
+              <mat-option value="11:00PM">20:00PM</mat-option>
+              <mat-option value="12:00PM">20:00PM</mat-option>
+              <mat-option value="13:00PM">20:00PM</mat-option>
+              <mat-option value="14:00PM">20:00PM</mat-option>
+              <mat-option value="15:00PM">20:00PM</mat-option>
+              <mat-option value="16:00PM">20:00PM</mat-option>
+              <mat-option value="17:00PM">20:00PM</mat-option>
+              <mat-option value="18:00PM">20:00PM</mat-option>
+              <mat-option value="19:00PM">20:00PM</mat-option>
+              <mat-option value="20:00PM">20:00PM</mat-option>
+              <mat-option value="21:00PM">22:00PM</mat-option>
+              <mat-option value="22:00PM">20:00PM</mat-option>
+            </mat-select>
+
+      </mat-form-field>
+
+
+      <mat-form-field appearance="fill">
+          <mat-label>Program</mat-label>
+          <mat-select  name="program" [(ngModel)]="program" >
+            <mat-option></mat-option>
+            <mat-option *ngFor="let program of unique | sort" value={{program}}  >
+              {{program}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Date</mat-label>
+          <mat-select  name="date" [(ngModel)]="date" >
+            <mat-option></mat-option>
+            <mat-option *ngFor="let date of uniquedate | sort" value={{date}}  >
+              {{date}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div class="container" >
+          <mat-spinner *ngIf="isLoading"></mat-spinner>
+          <table class="table table-bordered">
+            <thead>
+              <th>User</th>
+              <th>Program</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Confirmed</th>
+              <th>Delete Res</th>
+            </thead>
+            <tbody>
+              <tr  *ngFor="let reservation of reservations  | tableFilter: form.value ">
+                <td>{{ reservation.userId }}</td>
+                <td>{{ reservation.program }}</td>
+                <td>{{ reservation.date }}</td>
+                <td>{{ reservation.time }}</td>
+                <td>{{ reservation.confirmed }}</td>
+                <td><button mat-stroked-button color="warn" (click)="onDelete(reservation.id)">DELETE</button></td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+    </form>
+
+
+  </section>

@@ -1,0 +1,144 @@
+#section {
+    width: 100%;
+    height: 100%;
+    margin-top: 80px;
+    background-color: #e4a24c77;
+    text-align: center;
+  }
+
+
+
+  /* CSS */
+  .mat-button {
+    margin-top: 10%;
+    margin-right: 30px;
+    left: 0;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .mat-button:after {
+    content: "";
+    background-color: #ed733b;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+  }
+
+  .mat-button:hover:after {
+    top: 0px;
+    left: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .mat-button {
+      padding: 13px 50px 13px;
+    }
+  }
+
+
+  /* CSS */
+  .mat-raised-button {
+    margin-top: 10%;
+    margin-right: 30px;
+    left: 0;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .mat-raised-button:after {
+    content: "";
+    background-color: #ed733b;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+  }
+
+  .mat-raised-button:hover:after {
+    top: 0px;
+    left: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .mat-raised-button {
+      padding: 13px 50px 13px;
+    }
+  }
+
+
+
+
+
+
+  .mat-menu-item {
+
+    font-size: 12px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    outline: 0;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .mat-menu-item:after {
+    content: "";
+    background-color: #ed733b;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+  }
+
+  .mat-menu-item:hover:after {
+    top: 0px;
+    left: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .mat-menu-item {
+      padding: 13px 50px 13px;
+    }
+  }
+
+  @media (max-width: 340px) {
+    .mat-raised-button,
+    .mat-button {
+      width: 80%;
+      margin-right: 0;
+    }
+  }

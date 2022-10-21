@@ -1,0 +1,12 @@
+.container {
+  margin-top: 10%;
+}
+
+.mat-raised-button{
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+

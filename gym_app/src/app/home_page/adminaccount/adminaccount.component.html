@@ -1,0 +1,15 @@
+<section id="section">
+    <button mat-button [matMenuTriggerFor]="Reservations">Reservations</button>
+    <mat-menu #Reservations="matMenu" yPosition="below">
+        <button mat-menu-item [routerLink]="['/reservationcalendar']" >All reservations</button>
+        <button mat-menu-item [routerLink]="['/myreservations']">My reservations</button>
+        <button mat-menu-item [routerLink]="['/reservations']" >Make a new reservation</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="belowMenu">Management</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <button mat-menu-item [routerLink]="['/usermanagement']">USER MANAGEMENT(Admin Only)</button>
+      <button mat-menu-item [routerLink]="['/classmanagement']" >CLASS MANAGEMENT(Admin Only)</button>
+    </mat-menu>
+    <button mat-raised-button [routerLink]="['/checkreservation']"  >Check a reservation</button>
+</section>

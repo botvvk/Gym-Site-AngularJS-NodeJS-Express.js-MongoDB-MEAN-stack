@@ -1,0 +1,61 @@
+<section class="section" id="features">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6 offset-lg-3">
+              <div class="section-heading">
+                  <h2>Προγ<em>ράμματα</em></h2>
+              </div>
+          </div>
+          <div class="col-lg-6">
+              <ul class="features-items">
+                  <li class="feature-item">
+                      <div class="left-icon">
+                          <img src="assets/images/INTERVALTRAINING.jpg" alt="First One" width = "1000" height = "700">
+                      </div>
+                      <div class="right-content">
+                          <h4>INTERVAL TRAINING</h4>
+                          <p>Οι γρήγορες εναλλαγές αερόβιας και αναερόβιας άσκησης σε κρατούν δυνατό.  -Στοχεύει στη βελτίωση της ευκινησίας,
+                             του κινητικού συντονισμού, στην αύξηση δύναμης και αντοχής, καθώς και στην ενίσχυση του καρδιοαναπνευστικού συστήματος.</p>
+                          <a href="#" class="text-button">Discover More</a>
+                      </div>
+                  </li>
+                  <li class="feature-item">
+                      <div class="left-icon">
+                          <img src="assets/images/ZUMBA.jpeg" alt="second one" width = "1000" height = "700">
+                      </div>
+                      <div class="right-content">
+                          <h4>ZUMBA</h4>
+                          <p>Χορογραφία σε latin ρυθμούς, όπως salsa, reggaeton κ.α, που συνδυάζει
+                            κινήσεις aerobic με εκφραστικές χορευτικές κινήσεις του κορμού.
+                              – Στοχεύει στη βελτίωση του συντονισμού των κινήσεων.</p>
+                          <a href="#" class="text-button">Discover More</a>
+                      </div>
+                  </li>
+                  <li class="feature-item">
+                      <div class="left-icon">
+                          <img src="assets/images/TRX.jpeg" alt="third gym training" width = "1000" height = "700">
+                      </div>
+                      <div class="right-content">
+                          <h4>TRX</h4>
+                          <p>Αν θέλεις να γυμνάσεις ολόκληρο το σώμα ή και τμήματα αυτού με τον πιο ευχάριστο τρόπο, τότε το TRX θα πρέπει να
+                             είναι η πρώτη σου επιλογή functional Training.   Απόκτησε δυνατό σώμα με απίστευτη σταθερότητα και πολύ γερό κορμό και μέση.</p>
+                          <a href="#" class="text-button">Discover More</a>
+                      </div>
+                  </li>
+                  <li class="feature-item">
+                    <div class="left-icon">
+                        <img src="assets/images/PILATES.jpeg" alt="fourth muscle" width = "1000" height = "700">
+                    </div>
+                    <div class="right-content">
+                        <h4>PILATES</h4>
+                        <p>Η τεχνική των γνωστών ασκήσεων του Joseph Pilates για μυϊκή ενδυνάμωση σε όλο το σώμα.
+                           Δίνει ιδιαίτερη έμφαση στην ενδυνάμωση κοιλιακών αλλά και πλάτης απαλλάσσοντας
+                           έτσι από τους πόνους στην περιοχή της μέσης και του αυχένα.</p>
+                        <a href="#" class="text-button">Discover More</a>
+                    </div>
+                </li>
+              </ul>
+            </div>
+      </div>
+  </div>
+</section>
