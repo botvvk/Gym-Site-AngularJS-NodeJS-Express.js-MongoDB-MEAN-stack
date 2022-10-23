@@ -1,3 +1,46 @@
+<div class="diet-container">
+  <div class="outer">
+    <div class="inner">
+      <form [formGroup]="dietForm" (ngSubmit)="onSubmit()">
+        <mat-label>Age:</mat-label>
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Age</mat-label>
+          <input
+            type="number"
+            matInput
+            formControlName="age"
+            placeholder="18"
+          />
+        </mat-form-field>
+        <mat-label>Height (in cm):</mat-label>
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Height</mat-label>
+          <input
+            type="number"
+            matInput
+            formControlName="height"
+            placeholder="18"
+          />
+        </mat-form-field>
+        <mat-label>Weight (in kg):</mat-label>
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Weight</mat-label>
+          <input
+            type="number"
+            matInput
+            formControlName="weight"
+            placeholder="18"
+          />
+        </mat-form-field>
+
+        <button mat-flat-button color="primary" class="full-width">
+          Generate Diet Plan
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
 <!--<!doctype html>
 <html>
 <head>
@@ -67,7 +110,7 @@
 </body>
 </html>
 -->
-<div id="overlay">
+<!-- <div id="overlay">
   <div>
     <p>Content you want the user to see goes here.</p>
     Click here to [<a href='#' onclick='overlay()'>close</a>]
@@ -140,4 +183,4 @@
 
 </script>
 
-<a id = 'first' href='#' onclick='overlay()'>Click here to show the overlay</a>
+<a id = 'first' href='#' onclick='overlay()'>Click here to show the overlay</a> -->

@@ -23,33 +23,35 @@ import { ReservationcalendarComponent } from './home_page/reservationcalendar/re
 import { CheckreservationComponent } from './home_page/checkreservation/checkreservation.component';
 import { CheckreservationuserComponent } from './home_page/checkreservationuser/checkreservationuser.component';
 import { DietComponent } from './home_page/diet/diet.component';
+import { DietPageComponent } from './home_page/diet-page/diet-page.component';
 
 const routes: Routes = [
   { path: '', component: BannerComponent },
-  { path: 'about',component:AboutComponent },
+  { path: 'about', component: AboutComponent },
   { path: 'allclasses', component: ClassesComponent },
   { path: 'schedules', component: SchedulesComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'login', component: LoginComponent},
+  { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'adminaccount', component: AdminaccountComponent,canActivate:[RoleGuard,AuthGuard],  data:{role:'Admin'}  },
-  { path: 'checkreservation', component: CheckreservationComponent,canActivate:[RoleGuard,AuthGuard],  data:{role:'Admin'}  },
-  { path: 'checkreservation/:email', component: CheckreservationuserComponent,canActivate:[RoleGuard,AuthGuard],  data:{role:'Admin'}  },
-  { path: 'myaccount', component: MyaccountComponent,canActivate:[AuthGuard]},
-  { path: 'mydiet', component: DietComponent ,canActivate:[AuthGuard]},
-  { path: 'reservations', component: ReservationsComponent,canActivate:[AuthGuard]},
-  { path: 'myreservations', component: MyreservationsComponent,canActivate:[AuthGuard]},
-  { path: 'reservationcalendar', component: ReservationcalendarComponent,canActivate:[RoleGuard,AuthGuard]},
-  { path: 'usermanagement',component: UsermanagementComponent,canActivate:[RoleGuard,AuthGuard],  data:{role:'Admin'} },
-  { path: 'classmanagement', component: ClassmanagementComponent,canActivate:[RoleGuard,AuthGuard],data:{role:'Admin'}  },
-  { path: 'users/:userId', component: UsersComponent, canActivate:[RoleGuard,AuthGuard], data:{role:'Admin'}  },
-  { path: 'classes/:classId', component: ClasseseditComponent, canActivate:[RoleGuard,AuthGuard], data:{role:'Admin'}  },
-  { path: 'createclass', component: ClassescComponent, canActivate:[RoleGuard,AuthGuard], data:{role:'Admin'}  },
+  { path: 'adminaccount', component: AdminaccountComponent, canActivate: [RoleGuard, AuthGuard], data: { role: 'Admin' } },
+  { path: 'checkreservation', component: CheckreservationComponent, canActivate: [RoleGuard, AuthGuard], data: { role: 'Admin' } },
+  { path: 'checkreservation/:email', component: CheckreservationuserComponent, canActivate: [RoleGuard, AuthGuard], data: { role: 'Admin' } },
+  { path: 'myaccount', component: MyaccountComponent, canActivate: [AuthGuard] },
+  { path: 'mydiet/:id', component: DietPageComponent, canActivate: [AuthGuard] },
+  { path: 'mydiet', component: DietComponent, canActivate: [AuthGuard] },
+  { path: 'reservations', component: ReservationsComponent, canActivate: [AuthGuard] },
+  { path: 'myreservations', component: MyreservationsComponent, canActivate: [AuthGuard] },
+  { path: 'reservationcalendar', component: ReservationcalendarComponent, canActivate: [RoleGuard, AuthGuard] },
+  { path: 'usermanagement', component: UsermanagementComponent, canActivate: [RoleGuard, AuthGuard], data: { role: 'Admin' } },
+  { path: 'classmanagement', component: ClassmanagementComponent, canActivate: [RoleGuard, AuthGuard], data: { role: 'Admin' } },
+  { path: 'users/:userId', component: UsersComponent, canActivate: [RoleGuard, AuthGuard], data: { role: 'Admin' } },
+  { path: 'classes/:classId', component: ClasseseditComponent, canActivate: [RoleGuard, AuthGuard], data: { role: 'Admin' } },
+  { path: 'createclass', component: ClassescComponent, canActivate: [RoleGuard, AuthGuard], data: { role: 'Admin' } },
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ],
-  providers:[ AuthGuard,RoleGuard]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+  providers: [AuthGuard, RoleGuard]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

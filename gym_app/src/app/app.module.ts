@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { AngularMaterialModule } from './angular-material.module';
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
@@ -8,15 +8,15 @@ import { RouterModule } from "@angular/router";
 
 
 
-import {MatCardModule} from '@angular/material/card';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatButtonModule} from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material/core';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
 import { MAT_DATE_FORMATS } from '@angular/material/core';
 import { MatMomentDateModule } from "@angular/material-moment-adapter";
 
@@ -50,6 +50,9 @@ import { ArraySortPipe } from "./home_page/reservationcalendar/sort.pipe";
 import { CheckreservationComponent } from './home_page/checkreservation/checkreservation.component';
 import { CheckreservationuserComponent } from './home_page/checkreservationuser/checkreservationuser.component';
 import { DietComponent } from './home_page/diet/diet.component';
+import { CouponPopup } from "./home_page/coupon-popup/coupon-popup.component";
+import { MatDialogModule } from "@angular/material/dialog";
+import { DietPageComponent } from "./home_page/diet-page/diet-page.component";
 
 
 
@@ -94,7 +97,9 @@ const MY_FORMATS = {
     ArraySortPipe,
     CheckreservationComponent,
     CheckreservationuserComponent,
-    DietComponent
+    DietComponent,
+    CouponPopup,
+    DietPageComponent
   ],
   imports: [
     BrowserModule,
@@ -117,9 +122,11 @@ const MY_FORMATS = {
     RouterModule,
     MatMomentDateModule,
     AuthModule,
+    MatDialogModule
 
   ],
-  providers: [{provide: MAT_DATE_FORMATS, useValue: MY_FORMATS}],
+  entryComponents: [CouponPopup],
+  providers: [{ provide: MAT_DATE_FORMATS, useValue: MY_FORMATS }],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
