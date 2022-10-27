@@ -2,8 +2,11 @@ import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { MatDialog } from "@angular/material/dialog";
 import { Router } from "@angular/router";
+import { AuthService } from 'src/app/auth/auth.service';
+import { Subscription } from "rxjs";
 import { CouponPopup } from "../coupon-popup/coupon-popup.component";
-import { reservationPerWeek, staticData } from "./staticData";
+import { Reservation } from "../reservations/reservation.model";
+import { ReservationsService } from "../reservations/reservations.service";
 
 @Component({
   selector: "app-diet",
@@ -12,20 +15,28 @@ import { reservationPerWeek, staticData } from "./staticData";
 })
 export class DietComponent implements OnInit {
   dietForm: FormGroup;
-  reservationList: Array<reservationPerWeek> = staticData;
-  sumCoefficent: any;
+  private reservationsSub: Subscription;
+  reservations: Reservation[] = [];
+  totalReservations = 0;
+  userId: string;
+  mu = 0;
+  mn = 0;
+  mov = 0;
+  mob = 0;
 
-  constructor(public dialog: MatDialog, private fb: FormBuilder, public router: Router) { }
+
+  constructor(public dialog: MatDialog, private fb: FormBuilder, public router: Router,
+    public reservationsService: ReservationsService, public authService: AuthService) { }
 
   ngOnInit(): void {
     this.openDialog();
     this.createForm();
-    this.calculateCoefficient();
+    this.getReservation();
   }
 
   openDialog() {
     const dialogRef = this.dialog.open(CouponPopup, {
-      panelClass: ["animate__animated", "animate__slideInLeft"]
+      panelClass: ["animate__animated", "animate__slideInDown", "xyz"]
     });
   }
 
@@ -37,17 +48,42 @@ export class DietComponent implements OnInit {
     })
   }
 
-
-  calculateCoefficient() {
-    this.sumCoefficent = this.getSum(this.reservationList, "totalCount", "multipler");
-    console.log("sum of coefficent", this.sumCoefficent);
+  getReservation() {
+    this.userId = this.authService.getUserId();
+    this.reservationsService.getReservationsById(this.userId);
+    this.reservationsSub = this.reservationsService
+      .getReservationUpdateListener()
+      .subscribe((reservationData: { reservations: Reservation[]; reservationCount: number }) => {
+        this.totalReservations = reservationData.reservationCount;
+        this.reservations = reservationData.reservations;
+        this.getTotalReservation()
+      });
   }
 
-  getSum(list, key, multiplerKey) {
-    return list.reduce(function (a, b) {
-      console.log(b[multiplerKey], b[key])
-      return a + b[multiplerKey] * b[key];
-    }, 0)
+
+
+  getTotalReservation() {
+    // get today date
+    let todayDate = new Date();
+    // get one month back date
+    let oneMonthBackDate = new Date();
+    oneMonthBackDate.setMonth(oneMonthBackDate.getMonth() - 1);
+
+    // filter reservation 
+    const confirmedReservation = this.reservations.filter((item: any) => {
+      // converting  item  date into date format
+      const splitDate = item.date.split("/");
+      const month = splitDate[1] - 1;
+      const day = splitDate[0];
+      const year = splitDate[2];
+      const reservationDate = new Date(year, month, day);
+      console.log(reservationDate)
+      // date convertion end
+
+      return item.confirmed === "YES" && reservationDate.getTime() >= oneMonthBackDate.getTime() &&
+        reservationDate.getTime() <= todayDate.getTime();
+    });
+    this.totalReservations = confirmedReservation.length;
   }
 
   onSubmit() {
@@ -55,7 +91,7 @@ export class DietComponent implements OnInit {
       return
     }
     const redirectPage = this.generateDiet();
-    const url = `mydiet/${redirectPage}`
+    const url = `dietplans/${redirectPage}`
     this.router.navigate([url]);
 
   }
@@ -66,8 +102,21 @@ export class DietComponent implements OnInit {
     let weight = this.dietForm.value.weight;
     let height = this.dietForm.value.height;
 
-    if (age >= 18 && age < 25 && weight < 70 && height < 150 && this.sumCoefficent > 2) return "diet1"
-    if (age >= 25 && age < 30 && weight < 90 && height < 170 && this.sumCoefficent > 3) return "diet2"
+    let bmi = (weight) / (height * height);
+
+
+    if (bmi >= 20 && bmi < 22) {
+      this.mn = 0;
+      this.mu = 0;
+      this.mob = 1;
+      this.mov = 1;
+    }
+
+
+    if (this.mu > 0 && this.mn > 0) return "diet1"
+    // if (this.mu > 0 && this.mn > 0) return "diet2"
     return "diet3"
   }
+
+
 }

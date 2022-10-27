@@ -37,7 +37,7 @@ const routes: Routes = [
   { path: 'checkreservation', component: CheckreservationComponent, canActivate: [RoleGuard, AuthGuard], data: { role: 'Admin' } },
   { path: 'checkreservation/:email', component: CheckreservationuserComponent, canActivate: [RoleGuard, AuthGuard], data: { role: 'Admin' } },
   { path: 'myaccount', component: MyaccountComponent, canActivate: [AuthGuard] },
-  { path: 'mydiet/:id', component: DietPageComponent, canActivate: [AuthGuard] },
+  { path: 'dietplans/:id', component: DietPageComponent, canActivate: [AuthGuard] },
   { path: 'mydiet', component: DietComponent, canActivate: [AuthGuard] },
   { path: 'reservations', component: ReservationsComponent, canActivate: [AuthGuard] },
   { path: 'myreservations', component: MyreservationsComponent, canActivate: [AuthGuard] },

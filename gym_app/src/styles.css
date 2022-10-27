@@ -2,8 +2,15 @@
 @import "~font-awesome/css/font-awesome.css";
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 
 .diet-container {
@@ -11,4 +18,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   height: 100%;
   margin-top: 80px;
   background-color: #e4a24c77;
+}
+
+.animate__animated {
+  animation-duration: 2s !important;
 }

@@ -16,10 +16,10 @@ export class CouponPopup implements OnInit {
   close() {
     document
       .getElementsByClassName("animate__animated")[0]
-      .classList.remove("animate__slideInLeft");
+      .classList.remove("animate__slideInDown");
     document
       .getElementsByClassName("animate__animated")[0]
-      .classList.add("animate__slideOutRight");
+      .classList.add("animate__slideOutDown");
     setTimeout(() => {
       this.dialog.closeAll();
     }, 1000);
