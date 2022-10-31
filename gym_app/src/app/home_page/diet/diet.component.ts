@@ -36,7 +36,9 @@ export class DietComponent implements OnInit {
 
   openDialog() {
     const dialogRef = this.dialog.open(CouponPopup, {
-      panelClass: ["animate__animated", "animate__slideInDown", "xyz"]
+      panelClass: ["animate__animated", "animate__slideInDown"],
+      minWidth: "550px",
+      minHeight: "400px"
     });
   }
 
