@@ -6,7 +6,8 @@
                 <div class="card-container">
                     <ng-container *ngFor="let diet of dietPlans">
                         <div class="component card card__category" *ngIf="tab.id == diet.type.id">
-                            <div class="card__imageContainer"> <a
+                            <div class="card__imageContainer">
+                                <a [href]="diet.recipeLink" target="_blank"
                                     class="card__titleLink manual-link-behavior elementFont__title margin-8-bottom">
                                     <div
                                         class="component lazy-image lazy-image-udf aspect_1x1 align-default rendered image-loaded">
@@ -14,7 +15,8 @@
                                                 alt="demo-img" width="272" height="272"> <span
                                                 class="placeholderText visually-hidden">{{diet.name}}</span> </div>
                                     </div>
-                                </a> </div>
+                                </a>
+                            </div>
                             <div class="card__detailsContainer">
                                 <div class="card__detailsContainer-left"> <a
                                         class="card__titleLink manual-link-behavior elementFont__titleLink margin-8-bottom">

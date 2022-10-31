@@ -9,7 +9,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "dinner",
             id: 5
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/275923/creamy-chicken-noodle-soup-with-rotisserie-chicken/"
     },
     {
         id: 2,
@@ -19,7 +20,9 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "dinner",
             id: 5
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/7919563/spaghetti-spinach-with-sun-dried-tomato-cream-sauce/"
+
     }, {
         id: 3,
         imageLink: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F10%2F04%2F7115885.jpg&w=272&h=272&c=sc&poi=face&q=60",
@@ -28,7 +31,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "dinner",
             id: 5
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/276341/chicken-cutlets-with-sun-dried-tomato-cream-sauce/"
     }, {
         id: 4,
         imageLink: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2016%2F12%2F27122556%2F52380891.jpg&w=272&h=272&c=sc&poi=face&q=60",
@@ -37,7 +41,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "dinner",
             id: 5
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/263346/american-goulash/"
     }, {
         id: 5,
         imageLink: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F10%2F09%2Feasy-italian-wedding-soup-960x960-1.jpg&w=272&h=272&c=sc&poi=face&q=60",
@@ -46,7 +51,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "dinner",
             id: 5
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/269824/minestra-maritata-italian-wedding-soup/"
     }, {
         id: 6,
         imageLink: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F01%2F05%2F7582923.jpg&w=272&h=272&c=sc&poi=face&q=60",
@@ -55,7 +61,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "breakfast",
             id: 1
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/278023/spinach-mushroom-quiche/"
     }, {
         id: 7,
         imageLink: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2018%2F10%2F22%2F5888434.jpg&w=272&h=272&c=sc&poi=face&q=60",
@@ -64,7 +71,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "breakfast",
             id: 1
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/268775/cinnamon-roll-overnight-oats/"
     },
     {
         id: 8,
@@ -74,7 +82,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "breakfast",
             id: 1
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/274166/baked-banana-nut-oatmeal-cups/"
     },
     {
         id: 9,
@@ -84,7 +93,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "breakfast",
             id: 1
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/7952410/spinach-mushroom-egg-casserole/"
     },
     {
         id: 10,
@@ -94,7 +104,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "breakfast",
             id: 1
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/8009135/cinnamon-roll-for-one/"
     },
     {
         id: 11,
@@ -104,7 +115,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "lunch",
             id: 3
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/269824/minestra-maritata-italian-wedding-soup/"
     },
     {
         id: 12,
@@ -114,7 +126,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "lunch",
             id: 3
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/278023/spinach-mushroom-quiche/"
     }, {
         id: 13,
         imageLink: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2022%2F03%2F01%2Fcucumber-sandwich.jpg&w=272&h=272&c=sc&poi=%5B920%2C780%5D&q=60&rect=0%2C0%2C2000%2C2000",
@@ -123,7 +136,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "lunch",
             id: 3
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/7949991/cucumber-sandwich/"
     }, {
         id: 14,
         imageLink: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F08%2F12%2F8432277.jpg&w=272&h=272&c=sc&poi=face&q=60",
@@ -132,7 +146,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "lunch",
             id: 3
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/281244/stuffed-cabbage-soup/"
     }, {
         id: 15,
         imageLink: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2022%2F05%2F03%2Fcarrot-soup.jpg&w=272&h=272&c=sc&poi=%5B960%2C940%5D&q=60&rect=0%2C0%2C2000%2C2000",
@@ -141,7 +156,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "lunch",
             id: 3
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/249990/carrot-soup/"
     },
     {
         id: 16,
@@ -151,7 +167,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "snack",
             id: 2
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/7916768/apple-pie-energy-balls/"
     },
     {
         id: 17,
@@ -161,7 +178,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "snack",
             id: 2
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/275207/peanut-butter-energy-balls/"
     }, {
         id: 18,
         imageLink: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2022%2F08%2F03%2FBreakfast-Peanut-Butter-Chocolate-Chip-Oatmeal-Cakes-v2-1x1-1.jpg&w=272&h=272&c=sc&poi=%5B980%2C960%5D&q=60&rect=163%2C276%2C1763%2C1876",
@@ -170,7 +188,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "snack",
             id: 2
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/7991713/breakfast-peanut-butter-chocolate-chip-oatmeal-cakes/"
     }, {
         id: 19,
         imageLink: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F08%2F14%2F8440286.jpg&w=272&h=272&c=sc&poi=face&q=60",
@@ -179,7 +198,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "snack",
             id: 2
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/281282/pumpkin-oatmeal-muffins/"
     }, {
         id: 20,
         imageLink: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2021%2F07%2F09%2Froasted-butternut-squash-seeds.jpg&w=272&h=272&c=sc&poi=%5B900%2C960%5D&q=60&rect=0%2C0%2C2000%2C2000",
@@ -188,7 +208,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "snack",
             id: 2
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/7911237/roasted-butternut-squash-seeds/"
     },
     {
         id: 21,
@@ -198,7 +219,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "snack",
             id: 4
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/273188/carrot-cake-energy-bites/"
     },
     {
         id: 22,
@@ -208,7 +230,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "snack",
             id: 4
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/269494/low-carb-blueberry-muffins/"
     }, {
         id: 23,
         imageLink: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2021%2F05%2F17%2Fcauliflower-chips-with-parmesan.jpg&w=272&h=272&c=sc&poi=%5B940%2C960%5D&q=60&rect=0%2C0%2C2000%2C2000",
@@ -217,7 +240,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "snack",
             id: 4
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/7904060/cauliflower-chips/"
     }, {
         id: 24,
         imageLink: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F05%2F21%2F8149517.jpg&w=272&h=272&c=sc&poi=face&q=60",
@@ -226,7 +250,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "snack",
             id: 4
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/280370/air-fryer-zucchini-chips/"
     },
     {
         id: 25,
@@ -236,7 +261,8 @@ export const lowCarbDietPlans: Array<dietPlan> = [
         type: {
             typeName: "snack",
             id: 4
-        }
+        },
+        recipeLink: "https://www.eatingwell.com/recipe/259080/strawberry-chocolate-greek-yogurt-bark/"
     },
 
 
@@ -247,6 +273,7 @@ export interface dietPlan {
     name: string;
     description: string;
     id: number;
+    recipeLink: string,
     type: {
         typeName: string,
         id: number
